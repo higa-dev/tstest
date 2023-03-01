@@ -1,5 +1,6 @@
 {
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "page": "git checkout master && npm run build && git add -f dist/* && git commit -m 'page' && git push -f origin master:page"
   }
 }
