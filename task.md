@@ -3,6 +3,9 @@
   * ejs, pug等
 * tsconfigのtarget何を選ぶべき？
 * minify
-  * mapを保つ
+  * sourcemapを保つ
+* github pagesの公開をコマンド化
+
+### 解決済
 * sourcemapが効かない
-  * localhostが原因と思われる
+  * github pagesなら効いたのでOK
