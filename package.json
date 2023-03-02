@@ -1,6 +1,11 @@
 {
   "scripts": {
-    "build": "tsc",
-    "page": "git checkout master && npm run build && git add -f dist/* && git commit -m 'page' && git push -f origin master:page"
+    "build": "npm run del && tsc && npm run ejs",
+    "ejs": "ejs-cli -b src/ejs/ '*.ejs' -e 'src/common/*' -o dist/view/",
+    "page": "git checkout master && npm run build && git add -f dist/* && git commit -m 'page' && git push -f origin master:page",
+    "del": "rm -rf dist"
+  },
+  "devDependencies": {
+    "ejs-cli": "^2.2.3"
   }
 }
